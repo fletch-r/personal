@@ -7,7 +7,9 @@ function Layout() {
     <>
       <nav className='bg-steal-950 h-[50px] flex items-stretch z-50 relative border-b border-oxford-main mb-20'>
         <div className="max-w-[1100px] mx-auto flex justify-between items-center w-full">
-            <h4 className='text-white text-xl font-cals'>Andrew</h4>
+            <a href='/'>
+                <h4 className='text-white text-xl font-cals'>Andrew</h4>
+            </a>
             <ol className='flex gap-20 h-2/3 pt-1'>
                 <a href='/about'>
                     <li>
@@ -17,6 +19,11 @@ function Layout() {
                 <a href='/projects'>
                     <li>
                         <h5 className='text-white font-inter'>Projects</h5>
+                    </li>
+                </a>
+                <a href='/cv'>
+                    <li>
+                        <h5 className='text-white font-inter'>CV</h5>
                     </li>
                 </a>
                 <a href='https://github.com/0xATHERIS' target='_blank' className='text-white'>
