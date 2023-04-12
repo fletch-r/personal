@@ -36,13 +36,10 @@ function Layout() {
             </ol>
         </div>
       </nav>
-      {/* <div className={`z-20 h-[200px] bg-black shadow absolute transition-all hover:top-[100px] left-0 w-full ${projectsHovered ? 'top-[100px]' : '-top-[100%]'}`}>
-        <p className='text-white'>This is where the projects are going to be</p>
-      </div> */}
       <main>
         <Outlet />
       </main>
-      <footer className='max-w-[1100px] mx-auto border-t border-oxford-main p-4 mt-40 flex justify-between'>
+      <footer className='max-w-[1100px] mx-auto border-t border-oxford-main px-4 py-6 mt-20 flex justify-between items-center'>
         <p className="text-neutral-500">Andrew Fletcher © 2023</p>
         <div className='flex gap-8'>
             <a href="https://www.twitter.com/httpfleck">
