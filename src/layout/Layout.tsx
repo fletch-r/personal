@@ -43,7 +43,7 @@ function Layout() {
         <Outlet />
       </main>
       <footer className='max-w-[1100px] mx-auto border-t border-oxford-main p-4 mt-40 flex justify-between'>
-        <p className="text-steal-400">Andrew Fletcher © 2023</p>
+        <p className="text-neutral-500">Andrew Fletcher © 2023</p>
         <div className='flex gap-8'>
             <a href="https://www.twitter.com/httpfleck">
                 <TwitterIcon />
