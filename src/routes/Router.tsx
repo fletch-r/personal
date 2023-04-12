@@ -10,8 +10,8 @@ function Router() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           {/* <Route path="blogs" element={<Blogs />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} /> */}
+          <Route path="contact" element={<Contact />} /> */}
+          <Route path="*" element={<h1 className='ml-40'>Coming Soon</h1>} />
         </Route>
       </Routes>
     </BrowserRouter>
