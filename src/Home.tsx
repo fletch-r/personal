@@ -35,6 +35,10 @@ function Home() {
           </a>
         </div>
       </div>
+
+      <div className="h-[400px] border w-full border-neutral-400 rounded flex justify-center items-center">
+        <h1>Placeholder</h1>
+      </div>
     </div>
   )
 }
