@@ -13,8 +13,8 @@ module.exports = {
       colors: {
         steal: {
           main: '#202426',
-          '50': '#f6f7f7',
-          '100': '#e1e5e6',
+          '50': '#FBFBFB',
+          '100': '#EEF0F1',
           '200': '#c3cbcc',
           '300': '#9da8ab',
           '400': '#788589',
