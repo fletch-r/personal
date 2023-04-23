@@ -2,7 +2,7 @@ import me from './assets/IMG_4015.jpg';
 
 function Home() {
   return (
-    <div className='flex flex-col items-center gap-14 md:gap-24 h-full mx-auto'>
+    <section className='flex flex-col items-center gap-14 md:gap-24 h-full mx-auto'>
       {/* Intro */}
       <div className="w-full flex justify-between items-center">
         <div className="flex flex-col gap-6 w-full">
@@ -133,7 +133,7 @@ function Home() {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
