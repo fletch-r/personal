@@ -39,7 +39,7 @@ function Layout() {
                     </ol>
                 </div>
             </nav>
-            <main className='h-screen max-w-[1000px] mx-auto px-4 md:p-0'>
+            <main className='h-full min-h-screen max-w-[1000px] mx-auto px-4 md:p-0'>
                 <Outlet />
             </main>
             <footer className='max-w-[1000px] mx-auto border-t border-steal-100 dark:border-oxford-main px-4 py-4 flex justify-between items-center'>
