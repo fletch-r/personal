@@ -15,7 +15,7 @@ export default function About() {
     }, 200);
 
     return (
-        <div className="flex flex-col gap-10">
+        <article className="flex flex-col gap-10 prose dark:prose-invert prose-p:my-0 mx-auto">
             <h1 className="font-cals text-4xl tracking-wider">About me</h1>
             <p>My name is Andrew Fletcher, I'm a {birthday.slice(0, 12)} year old, frontend developer from the north-west of England.</p>
             <p>My background is in developing internal systems for an e-commerce platform. This includes PIM and CMS applications.</p>
@@ -29,6 +29,6 @@ export default function About() {
                 I believe that all frontend developers need to learn UI/UX as without it, no matter how well you know HTML, CSS and Javascript 
                 or however clean your code is, if your website looks bad and acts bad, then you've got a bad website.
             </p>
-        </div>
+        </article>
     );
 }
