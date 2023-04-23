@@ -1,4 +1,4 @@
-import me from './assets/IMG_4015.jpg';
+import me from '../assets/IMG_4015.jpg';
 
 function Home() {
   return (
