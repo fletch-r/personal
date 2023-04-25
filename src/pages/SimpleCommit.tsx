@@ -9,7 +9,8 @@ function SimpleCommit() {
           Simple Commit
         </h1>
         <a
-          href="https://github.com/0xATHERIS"
+          href="https://github.com/0xATHERIS/simple-commit"
+          target='_blank'
           className="hover:bg-steal-300 rounded-full px-1 py-1 transition-all hover:bg-opacity-20 flex justify-center items-center"
         >
           <GitHubIcon className="w-full" />
