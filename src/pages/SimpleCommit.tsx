@@ -56,14 +56,6 @@ function SimpleCommit() {
               If you have a custom template in your settings the following steps may be out of order.
             </li>
             <li>
-              List item two
-              <ul className="pl-5 mt-2 space-y-1 list-disc list-inside">
-                <li>I'm not sure if we'll bother styling more than two levels deep.</li>
-                <li>Two is already too much, three is guaranteed to be a bad idea.</li>
-                <li>If you nest four levels deep you belong in prison.</li>
-              </ul>
-            </li>
-            <li>
               Choose Changes to Stage:
               <ul className="pl-5 mt-2 space-y-1 list-disc list-inside">
                 <li>
