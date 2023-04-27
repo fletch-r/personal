@@ -45,6 +45,63 @@ span {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.slide-left {
+  animation: 0.75s ease-out 0s 1 slideInFromLeft;
+}
+@keyframes slideInFromLeft {
+  0% {
+    margin-left: -20px;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+.slide-right {
+  animation: 0.75s ease-out 0s 1 slideInFromRight;
+}
+@keyframes slideInFromRight {
+  0% {
+    margin-right: -20px;
+    opacity: 0;
+  }
+  100% {
+    margin-right: 2rem;
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: 0.75s ease-out 0s 1 slideInFromBottom;
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up-30 {
+  animation: 0.75s ease-out 0s 1 slideInFromBottomDelayed;
+}
+
+@keyframes slideInFromBottomDelayed {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
