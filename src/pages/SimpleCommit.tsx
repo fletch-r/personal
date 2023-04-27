@@ -1,20 +1,28 @@
+import React from 'react';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Code from '../components/Code';
+import SimpleCommitIcon from '../assets/SimpleCommitIcon.png';
 
 function SimpleCommit() {
   return (
     <section className='flex flex-col gap-10'>
-      <div className="flex items-baseline gap-4">
-        <h1 className="text-4xl font-cals tracking-wider leading-none">
-          Simple Commit
-        </h1>
-        <a
-          href="https://github.com/0xATHERIS/simple-commit"
-          target='_blank'
-          className="hover:bg-steal-300 rounded-full px-1 py-1 transition-all hover:bg-opacity-20 flex justify-center items-center"
-        >
-          <GitHubIcon className="w-full" />
-        </a>
+      <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4">
+          <img src={SimpleCommitIcon} alt="Simple Commit" width={50} />
+          <h1 className="text-4xl font-cals tracking-wider leading-none">
+            Simple Commit
+          </h1>
+        </div>
+        <div>
+          <a
+            href="https://github.com/0xATHERIS/simple-commit"
+            target='_blank'
+            rel="noreferrer"
+            className="hover:bg-steal-300 rounded-full w-full h-full px-1 py-1 transition-all hover:bg-opacity-20 flex justify-center items-center mt-1"
+          >
+            <GitHubIcon className="w-full" />
+          </a>
+        </div>
       </div>
 
       <article className="flex flex-col gap-8 w-full">
@@ -27,7 +35,7 @@ function SimpleCommit() {
           <ul className="space-y-2 text-gray-500 list-disc list-inside dark:text-gray-200 pl-4">
             <li>Provides simple input boxes or selection boxes for writing commit messages.</li>
             <li>
-              If you're committing without having any changes staged. Simple Commit will first prompt you to select what file(s) you wish to stage.
+              If you&apos;re committing without having any changes staged. Simple Commit will first prompt you to select what file(s) you wish to stage.
             </li>
             <li>Automatically detects and suggests issue numbers from your current branch.</li>
             <li>
@@ -47,11 +55,11 @@ function SimpleCommit() {
               Start Simple Commit:
               <ul className="pl-5 mt-2 space-y-1 list-disc list-inside">
                 <li>
-                  Click the Simple Commit icon in the Source Control tab which is usually to the right of the refresh 
+                  Click the Simple Commit icon in the Source Control tab which is usually to the right of the refresh
                   icon.
                 </li>
                 <li>
-                  Open the command palette in VSCode (usually with <Code>Ctrl + Shift + P</Code> or <Code>Cmd + Shift + P</Code>), type "Simple Commit" and select the appropriate command.
+                  Open the command palette in VSCode (usually with <Code>Ctrl + Shift + P</Code> or <Code>Cmd + Shift + P</Code>), type &quot;Simple Commit&quot; and select the appropriate command.
                 </li>
               </ul>
               If you have a custom template in your settings the following steps may be out of order.
@@ -60,7 +68,7 @@ function SimpleCommit() {
               Choose Changes to Stage:
               <ul className="pl-5 mt-2 space-y-1 list-disc list-inside">
                 <li>
-                  If you haven't staged any commits the first prompt will be a multi-select prompt asking you to select one or more files to stage for this commit. If you have already staged changes then this step will be skipped.
+                  If you haven&apos;t staged any commits the first prompt will be a multi-select prompt asking you to select one or more files to stage for this commit. If you have already staged changes then this step will be skipped.
                 </li>
               </ul>
             </li>
@@ -68,7 +76,7 @@ function SimpleCommit() {
               Type:
               <ul className="pl-5 mt-2 space-y-1 list-disc list-inside">
                 <li>
-                  Choose the type of commit you're making. For example, <span>fix</span> which would be selected for bug fix type commits.
+                  Choose the type of commit you&apos;re making. For example, <span>fix</span> which would be selected for bug fix type commits.
                 </li>
               </ul>
             </li>
@@ -103,7 +111,7 @@ function SimpleCommit() {
               Number:
               <ul className="pl-5 mt-2 space-y-1 list-disc list-inside">
                 <li>
-                  Simple Commit should auto-detect your issue/ticket number and pre-populate the input box with the detected number. If your desired number doesn't automatically appear in the prompt please enter your desired issue/ticket number message or modify <Code>simpleCommit.issueRegex</Code> in your <Code>settings.json</Code> with a custom regex that you know detects your issue/ticket number.
+                  Simple Commit should auto-detect your issue/ticket number and pre-populate the input box with the detected number. If your desired number doesn&apos;t automatically appear in the prompt please enter your desired issue/ticket number message or modify <Code>simpleCommit.issueRegex</Code> in your <Code>settings.json</Code> with a custom regex that you know detects your issue/ticket number.
                 </li>
               </ul>
             </li>
@@ -140,9 +148,9 @@ function SimpleCommit() {
 
           <div className="flex flex-col gap-8 pl-4">
             <p>
-              Simple Commit can be configured through VSCode settings. To access the settings, go to 
-              "File" {'>'} "Preferences" {'>'} "Settings" or use the keyboard shortcut 
-              <Code>Ctrl + ,</Code> or 
+              Simple Commit can be configured through VSCode settings. To access the settings, go to
+              &quot;File&quot; {'>'} &quot;Preferences&quot; {'>'} &quot;Settings&quot; or use the keyboard shortcut
+              <Code>Ctrl + ,</Code> or
               <Code>Cmd + ,</Code>.
             </p>
 
@@ -172,9 +180,9 @@ function SimpleCommit() {
                   <tr>
                     <td className="text-center p-4 text-sm">issueRegex</td>
                     <td className="text-center p-4 text-sm">
-                      <Code>"(?!.*\/)([^\\d]*)(\\d+)"</Code>
+                      <Code>&quot;(?!.*\/)([^\\d]*)(\\d+)&quot;</Code>
                     </td>
-                    <td className="p-4 text-sm">Add a custom regex if the default regex for Simple Commit doesn't automatically detect your issue number.</td>
+                    <td className="p-4 text-sm">Add a custom regex if the default regex for Simple Commit doesn&apos;t automatically detect your issue number.</td>
                   </tr>
                   <tr>
                     <td className="text-center p-4 text-sm">template</td>
