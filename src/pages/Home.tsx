@@ -35,7 +35,13 @@ function Home() {
               <p className='text-sm'>Typescript</p>
             </div>
           </a>
-          <a href="/htmc" className="flex flex-1 justify-between gap-2 flex-col bg-oxford-main/10 hover:bg-transparent hover:bg-gradient-to-r hover:from-amber-600/10 hover:to-orange-600/10 p-4 rounded-lg">
+          {/*
+            TODO - Change below 2 projects to:
+              - Create React Interface: A npm package that you run in the console to get started on a new React UI Library.
+              - Documentation UI: A UI library built with CRI that is tailored to writing clean documentation.
+              - Simple Table: A fancy but Simple to use Table component. Ref: https://coyleandrew.medium.com/design-better-data-tables-4ecc99d23356
+          */}
+          {/* <a href="/htmc" className="flex flex-1 justify-between gap-2 flex-col bg-oxford-main/10 hover:bg-transparent hover:bg-gradient-to-r hover:from-amber-600/10 hover:to-orange-600/10 p-4 rounded-lg">
             <div className='flex flex-col gap-2'>
               <h4 className="text-xl font-bold">HTMC</h4>
               <p className="text-sm">A merge tool that combines HTML files. Allows for a component like structure for HTML files.</p>
@@ -58,7 +64,7 @@ function Home() {
               <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
               <p className='text-sm'>Rust</p>
             </div>
-          </a>
+          </a> */}
         </div>
       </div>
 
