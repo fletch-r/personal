@@ -52,6 +52,12 @@ module.exports = {
           '800': '#3a4350',
           '900': '#333a46',
           '950': '#1f242d',
+        },
+        javascript: {
+          main: '#F1E05A'
+        },
+        typescript: {
+          main: '#3077C6'
         }
       }
     },
