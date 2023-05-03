@@ -41,6 +41,18 @@ function Home() {
               - Documentation UI: A UI library built with CRI that is tailored to writing clean documentation.
               - Simple Table: A fancy but Simple to use Table component. Ref: https://coyleandrew.medium.com/design-better-data-tables-4ecc99d23356
           */}
+          <a href="/create-react-interface" className="flex flex-1 justify-between gap-2 flex-col bg-oxford-main/10 hover:bg-transparent hover:bg-gradient-to-r hover:from-sky-600/10 hover:to-red-600/10 p-4 rounded-lg">
+            <div className='flex flex-col gap-2'>
+              <h4 className="text-xl font-bold">Create React Interface</h4>
+              <p className="text-sm">An NPM package that gets you started with a Reactjs UI Library.</p>
+            </div>
+            <div className="flex gap-2 justify-start items-center h-6">
+              <div className="w-2 h-2 bg-sky-600 rounded-full"></div>
+              <p className='text-sm'>Typescript</p>
+              <div className="w-2 h-2 bg-red-600 rounded-full"></div>
+              <p className='text-sm'>NPM</p>
+            </div>
+          </a>
           {/* <a href="/htmc" className="flex flex-1 justify-between gap-2 flex-col bg-oxford-main/10 hover:bg-transparent hover:bg-gradient-to-r hover:from-amber-600/10 hover:to-orange-600/10 p-4 rounded-lg">
             <div className='flex flex-col gap-2'>
               <h4 className="text-xl font-bold">HTMC</h4>
@@ -66,6 +78,34 @@ function Home() {
             </div>
           </a> */}
         </div>
+        <div className="w-full flex flex-col md:flex-row gap-6 mb-6 slide-up-30">
+        <a href="/simple-table" className="flex flex-1 justify-between gap-2 flex-col bg-oxford-main/10 hover:bg-transparent hover:bg-gradient-to-r hover:from-blue-600/10 hover:to-orange-600/10 p-4 rounded-lg">
+            <div className='flex flex-col gap-2'>
+              <h4 className="text-xl font-bold">Simple Table</h4>
+              <p className="text-sm">Reactive and highly stylized React Table component.</p>
+            </div>
+            <div className="flex gap-2 justify-start items-center h-6">
+              <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+              <p className='text-sm'>React</p>
+              <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
+              <p className='text-sm'>HTML</p>
+            </div>
+          </a>
+          <a href="/documentation-ui" className="flex flex-1 justify-between gap-2 flex-col bg-oxford-main/10 hover:bg-transparent hover:bg-gradient-to-r hover:from-blue-600/10 hover:via-orange-600/10 hover:to-cyan-600/10 p-4 rounded-lg">
+            <div className='flex flex-col gap-2'>
+              <h4 className="text-xl font-bold">Documentation UI</h4>
+              <p className="text-sm">A UI library to write simple and elegant documentation pages.</p>
+            </div>
+            <div className="flex gap-2 justify-start items-center h-6">
+              <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+              <p className='text-sm'>React</p>
+              <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
+              <p className='text-sm'>HTML</p>
+              <div className="w-2 h-2 bg-cyan-600 rounded-full"></div>
+              <p className='text-sm'>CSS</p>
+            </div>
+          </a>
+        </div>
       </div>
 
       {/* Work Projects */}
@@ -88,7 +128,7 @@ function Home() {
               <p className="text-sm">A PIM built and designed by me for JDSports that allows various teams to organize and manage thousands of product information.</p>
             </div>
             <div className="flex gap-2 justify-start items-center h-6">
-              <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+              <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
               <p className='text-sm'>React</p>
             </div>
           </a>
