@@ -59,10 +59,30 @@ module.exports = {
         typescript: {
           main: '#3077C6'
         }
+      },
+      keyframes: {
+        "slide-up-30": {
+          "0%": {
+            transform: "translateY(30px)",
+            opacity: 0
+          },
+          "100%": {
+            transform: "translateY(0)",
+            opacity: 1,
+            visibility: "visible"
+          }
+        }
+      },
+      animation: {
+        "slide-up-25": "0.7s ease-in-out 0.25s 1 forwards slide-up-30",
+        "slide-up-50": "0.7s ease-in-out 0.5s 1 forwards slide-up-30",
+        "slide-up-75": "0.7s ease-in-out 0.75s 1 forwards slide-up-30",
+        "slide-up-100": "0.7s ease-in-out 1s 1 forwards slide-up-30",
       }
     },
   },
   plugins: [
+    // eslint-disable-next-line no-undef
     require('@tailwindcss/typography'),
   ],
 }
