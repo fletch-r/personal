@@ -61,9 +61,9 @@ module.exports = {
         }
       },
       keyframes: {
-        "slide-up-30": {
+        "slide-up-40": {
           "0%": {
-            transform: "translateY(30px)",
+            transform: "translateY(40px)",
             opacity: 0
           },
           "100%": {
@@ -74,10 +74,9 @@ module.exports = {
         }
       },
       animation: {
-        "slide-up-25": "0.7s ease-in-out 0.25s 1 forwards slide-up-30",
-        "slide-up-50": "0.7s ease-in-out 0.5s 1 forwards slide-up-30",
-        "slide-up-75": "0.7s ease-in-out 0.75s 1 forwards slide-up-30",
-        "slide-up-100": "0.7s ease-in-out 1s 1 forwards slide-up-30",
+        "slide-up": "0.5s ease-in-out slide-up-40",
+        "slide-up-1": "0.5s ease-in-out 0.1s 1 forwards slide-up-40",
+        "slide-up-2": "0.5s ease-in-out 0.2s 1 forwards slide-up-40",
       }
     },
   },
