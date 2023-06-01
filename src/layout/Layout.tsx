@@ -8,7 +8,7 @@ import { Outlet } from 'react-router-dom';
 function Layout() {
     return (
         <>
-            <nav className='flex items-stretch z-50 relative border-b border-steal-100 p-4 mb-14 md:mb-18 dark:border-oxford-main'>
+            <nav className='flex items-stretch z-50 relative border-b p-4 mb-14 md:mb-18 border-oxford-main'>
                 <div className="max-w-[1200px] mx-auto flex justify-between items-center w-full md:p-0">
                     <a href='/'>
                         <div className='flex group transition-all'>
@@ -43,7 +43,7 @@ function Layout() {
             <main className='h-full min-h-screen max-w-[1000px] mx-auto px-4 md:p-0'>
                 <Outlet />
             </main>
-            <footer className='max-w-[1000px] mx-auto border-t border-steal-100 dark:border-oxford-main px-4 py-4 flex justify-between items-center mt-12'>
+            <footer className='max-w-[1000px] mx-auto border-t border-oxford-main px-4 py-4 flex justify-between items-center mt-12'>
                 <p className="text-neutral-500">Andrew Fletcher © {new Date().getFullYear()}</p>
                 <div className='flex gap-8'>
                     <a href="https://www.twitter.com/httpfleck" target='_blank' rel="noreferrer" className="hover:bg-steal-300 rounded-full px-2 py-2 transition-all hover:bg-opacity-20 flex justify-center items-center">

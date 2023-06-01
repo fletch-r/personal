@@ -32,7 +32,7 @@ function SimpleCommit() {
 
         <figure>
           <figcaption className="text-2xl font-cals mb-2">Features</figcaption>
-          <ul className="space-y-2 text-gray-500 list-disc list-inside dark:text-gray-200 pl-4">
+          <ul className="space-y-2 list-disc list-inside text-gray-200 pl-4">
             <li>Provides simple input boxes or selection boxes for writing commit messages.</li>
             <li>
               If you&apos;re committing without having any changes staged. Simple Commit will first prompt you to select what file(s) you wish to stage.
@@ -50,7 +50,7 @@ function SimpleCommit() {
         <figure>
           <figcaption className="text-2xl font-cals mb-2">Usage</figcaption>
           <h4 className="pl-4 font-bold mb-2">To use Simple Commit, either:</h4>
-          <ol className="space-y-4 text-gray-500 list-decimal list-inside dark:text-gray-200 pl-4">
+          <ol className="space-y-4 list-decimal list-inside text-gray-200 pl-4">
             <li>
               Start Simple Commit:
               <ul className="pl-5 mt-2 space-y-1 list-disc list-inside">
