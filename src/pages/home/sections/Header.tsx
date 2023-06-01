@@ -3,7 +3,7 @@ import me from '../../../assets/headshot.png';
 
 function Header() {
     return (
-        <div className="w-full flex justify-between items-center">
+        <section className="w-full flex justify-between items-center">
             <div className="flex flex-col gap-6 w-full">
                 <h1 className="text-2xl slide-left">Hey, I&apos;m <span>Andrew Fletcher</span></h1>
                 <div className="flex flex-col gap-3 w-full md:w-2/3 slide-left">
@@ -17,7 +17,7 @@ function Header() {
                     <img src={me} alt="me" className="grayscale hover:grayscale-0 transition-all" />
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
