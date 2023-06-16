@@ -8,7 +8,7 @@ function ContentEditor() {
                 A CMS where users can build and change the content of pages.
             </p>
             <p>
-                The Content Editor was the first project I was assigned when joining JDSports.
+                The Content Editor was the first project I was assigned to when joining JDSports.
 
             </p>
         </article>
