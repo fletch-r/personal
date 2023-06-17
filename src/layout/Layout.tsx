@@ -46,7 +46,7 @@ function Layout() {
             <div className="mt-12">
                 <div className="h-px content-none w-3/5 mx-auto bg-gradient-to-r from-transparent via-neutral-600 to-transparent" />
                 <footer className='max-w-[1000px] mx-auto border-oxford-main px-4 py-4 flex justify-between items-center'>
-                    <p className="text-neutral-500">Andrew Fletcher © {new Date().getFullYear()}</p>
+                    <p className="text-neutral-500">Andrew Fletcher - {new Date().getFullYear()}</p>
                     <div className='flex gap-8'>
                         <a href="https://www.twitter.com/httpfleck" target='_blank' rel="noreferrer" className="hover:bg-steal-300 rounded-full px-2 py-2 transition-all hover:bg-opacity-20 flex justify-center items-center">
                             <TwitterIcon />
