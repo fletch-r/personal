@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 
 function calculateAge(birthday: Date) {
@@ -15,7 +16,7 @@ export default function About() {
     }, 200);
 
     return (
-        <article className="flex flex-col gap-10 prose prose-invert prose-p:my-0 mx-auto">
+        <article className="prose prose-invert mx-auto">
             <h1 className="font-cals text-4xl tracking-wider">About me</h1>
             <p>My name is Andrew Fletcher, I'm a {birthday.slice(0, 12)} year old, frontend developer from the north-west of England.</p>
             <p>My background is in developing internal systems for an e-commerce platform. This includes PIM and CMS applications.</p>
