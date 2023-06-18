@@ -2,11 +2,8 @@ import React from 'react'
 import "prismjs/themes/prism-tomorrow.css";
 
 import placeholder_img from '../../assets/placeholder.png';
-import VueLogo from '../../assets/vue-logo.png';
-import MongoDBLogo from '../../assets/mongodb_logo.webp';
-import ExpressLogo from '../../assets/expressjs.png';
-import NodeLogo from '../../assets/nodejs.png';
 import ContentJSON from './ContentJSON';
+import TechStack from './TechStack';
 
 function ContentEditor() {
     return (
@@ -25,7 +22,7 @@ function ContentEditor() {
                 Then once the application was released to the first users more developers were brought onto the project.
             </p>
 
-            <figure className="w-2/3 mx-auto">
+            <figure className="w-[700px] h-[475px] mx-auto">
                 <img src={placeholder_img} alt="Content Editor Home" className="rounded shadow-md" />
                 <figcaption>
                     Home page of the Content Editor
@@ -34,20 +31,7 @@ function ContentEditor() {
 
             <h2>Technologies Used</h2>
             <div className="not-prose">
-                <div className="flex w-full justify-evenly gap-8">
-                    <div className="rounded-full bg-oxford-950 border border-oxford-900 p-4 flex justify-center items-center" >
-                        <img src={MongoDBLogo} alt="MongoDB" className="w-16 h-16" loading="lazy" />
-                    </div>
-                    <div className="rounded-full bg-oxford-950 border border-oxford-900 p-4 flex justify-center items-center" >
-                        <img src={ExpressLogo} alt="express" className="w-16 h-16" loading="lazy" />
-                    </div>
-                    <div className="rounded-full bg-oxford-950 border border-oxford-900 p-4 flex justify-center items-center" >
-                        <img src={VueLogo} alt="vuejs" className="w-16 mt-2" loading="lazy" />
-                    </div>
-                    <div className="rounded-full bg-oxford-950 border border-oxford-900 p-4 flex justify-center items-center" >
-                        <img src={NodeLogo} alt="nodejs" className="w-16 h-16" loading="lazy" />
-                    </div>
-                </div>
+                <TechStack />
             </div>
 
             <h3>MongoDB</h3>
@@ -85,6 +69,10 @@ function ContentEditor() {
                         Click the Components to see what the page JSON would look like when it is generated from the page builder.
                     </p>
                     <ContentJSON />
+                    <p>
+                        The SSR and the CMS will look at this JSON and know what component needs adding to the Vue file and from
+                        the content what the desktop and mobile images, button text and links will say.
+                    </p>
                 </li>
             </ul>
 
@@ -96,6 +84,15 @@ function ContentEditor() {
 
             <h3>Nodejs</h3>
             <p>We used Nodejs as our backend framework.</p>
+
+            <h2>How a user edits content</h2>
+            <p>
+                In the CMS, to edit the component the editable values are in the sidebar. It will loop over the components content and if it is an Array,
+                it will render a button on that field, in the sidebar, which allows the user to add more of that content. For example, there are usually one
+                or more buttons/CTAs, so in the sidebar we use the <code>key</code> from the JSON to render the label of the field in the sidebar and the
+                <code>value</code> of the CTAs would be an Array, so the CTAs section will have a button that says &quot;+ Add&quot;, when add is clicked the
+                default value for a CTA will be pushed into the CTAs array. Adding another button on to that component.
+            </p>
         </article>
     )
 }
