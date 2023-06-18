@@ -6,7 +6,7 @@ import About from '../pages/About';
 import SimpleCommit from "../pages/SimpleCommit";
 import RadixTable from "../pages/RadixTable";
 import CRI from "../pages/CRI";
-import ContentEditor from "../pages/ContentEditor";
+import ContentEditor from "../pages/content_editor/ContentEditor";
 
 function Router() {
   return (

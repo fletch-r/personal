@@ -15,7 +15,7 @@ function ComponentCard({ onClick, selected, label, children }: ComponentCardProp
             className={`
             w-1/4 h-[180px]
             bg-neutral-700
-            border ${selected ? 'border-inherit' : 'border-transparent'} hover:border-inherit
+            border-2 ${selected ? 'border-neutral-300' : 'border-transparent hover:border-neutral-500'}
             rounded-lg
             p-2
             flex flex-col items-center justify-evenly
