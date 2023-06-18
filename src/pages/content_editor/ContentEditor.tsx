@@ -77,7 +77,10 @@ function ContentEditor() {
             </ul>
 
             <h3>Expressjs</h3>
-            <p>We used ExpressJS as our API.</p>
+            <p>
+                We used ExpressJS as our API framework as it is a minimal framework that was just everything we needed to connect the frontend to MongoDB.
+                The main reason we chose this is because it&apos;s quick and easy to set up with no bloat.
+            </p>
 
             <h3>Vuejs</h3>
             <p>We used Vuejs as our frontend framework.</p>
