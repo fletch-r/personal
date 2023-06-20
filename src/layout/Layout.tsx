@@ -4,6 +4,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import { Outlet } from 'react-router-dom';
+import Tooltip from '../components/Tooltip';
 
 function Layout() {
     return (
@@ -27,9 +28,11 @@ function Layout() {
                                 <h5 className='text-sm'>Projects</h5>
                             </li>
                         </a>
-                        <a href='/cv'>
+                        <a href="/src/assets/CV.pdf" download="AndrewFletcherCV">
                             <li className="hover:bg-steal-300 px-2 py-1 transition-all rounded hover:bg-opacity-20 flex justify-center items-center">
-                                <h5 className='text-sm'>CV</h5>
+                                <Tooltip label="Click To Download">
+                                    <h5 className='text-sm'>CV</h5>
+                                </Tooltip>
                             </li>
                         </a>
                         <a href='https://github.com/0xATHERIS' target='_blank' rel="noreferrer">
