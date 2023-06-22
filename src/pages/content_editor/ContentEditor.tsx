@@ -86,9 +86,56 @@ function ContentEditor() {
             <p>We used Vuejs as our frontend framework.</p>
 
             <h3>Nodejs</h3>
-            <p>We used Nodejs as our backend framework.</p>
+            <p>We used Nodejs as our backend framework, as frontend developers a framework built on JavaScript was comfortable and easy to integrate into the team.</p>
 
-            <h2>How a user edits content</h2>
+            {/* TODO: Change the name of this header */}
+            <h2>Work Flow - E2E</h2>
+
+            <h3>Dashboard</h3>
+            <p>
+                After logging in the user will be greeted with the Dashboard.
+                This is the place to selected your platform and which fascia and country you want to edit a page for.
+                Once the user has selected a fascia and country the options showing will change the that sites (fascia + country) webpages.
+                From there you have 4 options.
+                <ul>
+                    <li>
+                        <p><strong>Edit</strong></p>
+                        <p>This will navigate you to the Page Editor where the user can make modifications to the webpage.</p>
+                    </li>
+                    <li>
+                        <p><strong>View</strong></p>
+                        <p>The user can view the webpage in the browser to see what the webpage would look like on the live site.</p>
+                    </li>
+                    <li>
+                        <p><strong>Schedule</strong></p>
+                        <p>
+                            Once clicked a modal will appear where the user can select a date from a calender component and a time.
+                            The webpage will then automatically be synced to live when it is that date and time.
+                        </p>
+                    </li>
+                    <li>
+                        <p><strong>Sync</strong></p>
+                        <p>This will sync the page to the live site.</p>
+                    </li>
+                </ul>
+            </p>
+
+            {/* TODO: Add images */}
+            <h3>Page Editor</h3>
+            <p>The Page Editor is split into 2 sections.</p>
+            <ul>
+                <li>
+                    Left - The Sidebar.
+                </li>
+                <li>
+                    Right - The Page Preview.
+                </li>
+            </ul>
+            <p>
+                Here the user can pick from a library of prebuilt components.
+            </p>
+
+            <h3>How a user edits content</h3>
             <p>
                 In the CMS, to edit the component the editable values are in the sidebar. It will loop over the components content and if it is an Array,
                 it will render a button on that field, in the sidebar, which allows the user to add more of that content. For example, there are usually one
