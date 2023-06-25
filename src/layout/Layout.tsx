@@ -9,7 +9,7 @@ import Tooltip from '../components/Tooltip';
 function Layout() {
     return (
         <>
-            <nav className='flex items-stretch z-50 relative border-b p-4 mb-14 md:mb-18 border-oxford-main'>
+            <nav className='flex items-stretch z-50 border-b p-4 mb-14 md:mb-18 border-oxford-main sticky top-0 left-0 bg-steal-950'>
                 <div className="max-w-[1200px] mx-auto flex justify-between items-center w-full md:p-0">
                     <a href='/'>
                         <div className='flex group transition-all'>
