@@ -78,15 +78,15 @@ function ContentEditor() {
 
             <h3>Expressjs</h3>
             <p>
-                We used ExpressJS as our API framework as it is a minimal framework that was just everything we needed to connect the frontend to MongoDB.
-                The main reason we chose this is because it&apos;s quick and easy to set up with no bloat.
+                We used ExpressJS as our API framework as it&apos;s a minimal framework that provides everything we need to
+                quickly and easily build an API that connects to MongoDB and provides data to the frontend.
             </p>
 
             <h3>Vuejs</h3>
             <p>We used Vuejs as our frontend framework.</p>
 
             <h3>Nodejs</h3>
-            <p>We used Nodejs as our backend framework, as frontend developers a framework built on JavaScript was comfortable and easy to integrate into the team.</p>
+            <p>We used Nodejs as our backend framework. As frontend developers a framework built on JavaScript was comfortable and easy to integrate into the team.</p>
 
             {/* TODO: Change the name of this header */}
             <h2>Work Flow - E2E</h2>
@@ -134,15 +134,40 @@ function ContentEditor() {
             <p>
                 Here the user can pick from a library of prebuilt components.
             </p>
-
-            <h3>How a user edits content</h3>
             <p>
-                In the CMS, to edit the component the editable values are in the sidebar. It will loop over the components content and if it is an Array,
-                it will render a button on that field, in the sidebar, which allows the user to add more of that content. For example, there are usually one
-                or more buttons/CTAs, so in the sidebar we use the <code>key</code> from the JSON to render the label of the field in the sidebar and the
-                <code>value</code> of the CTAs would be an Array, so the CTAs section will have a button that says &quot;+ Add&quot;, when add is clicked the
-                default value for a CTA will be pushed into the CTAs array. Adding another button on to that component.
+                Once the user has selected a component and added it onto the webpage.
+                The user will see the default component on the right, how it would appear on the website and the components editable options and their default values on the left.
             </p>
+            <p>
+                The sidebar works by looping over the content object and populating the sidebar with fields. The labels to those fields are the <code>key</code> and then there
+                are different fields depending on the type of the <code>value</code>. For example, if the type of the value is <code>string</code> then a simple input text field
+                will be rendered. Where as, if the value is an <code>Array</code> then each object of the array would be rendered and also a button. That button would then allow
+                the user to add another object to the array. This is usually used for things like CTAs.
+            </p>
+
+            <figure className="w-[700px] h-[475px] mx-auto">
+                <img src={placeholder_img} alt="Content Editor Home" className="rounded shadow-md" />
+                <figcaption>
+                    Page Editor of the Content Editor
+                </figcaption>
+            </figure>
+
+            <h3>Saving</h3>
+            <p>
+                Saving the page will save a document into Mongo containing the data object of each component and other details such as user email and save message.
+            </p>
+
+            <h3>After editing a page</h3>
+            <p>
+                From here the user can then view the currently saved page. Schedule the page to go live at a future specific date. Or directly sync that page to appear on the live website.
+            </p>
+
+            <figure className="w-[700px] h-[475px] mx-auto">
+                <img src={placeholder_img} alt="Content Editor Home" className="rounded shadow-md" />
+                <figcaption>
+                    Scheduling a page.
+                </figcaption>
+            </figure>
         </article>
     )
 }
