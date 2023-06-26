@@ -29,7 +29,7 @@ function ContentEditor() {
                 </figcaption>
             </figure>
 
-            <h2>Technologies Used</h2>
+            <h2>Tech Stack:</h2>
             <div className="not-prose">
                 <TechStack />
             </div>
