@@ -7,6 +7,7 @@ import SimpleCommit from "../pages/SimpleCommit";
 import RadixTable from "../pages/RadixTable";
 import CRI from "../pages/CRI";
 import ContentEditor from "../pages/content_editor/ContentEditor";
+import PRISM from "../pages/prism/Prism";
 
 function Router() {
   return (
@@ -19,6 +20,7 @@ function Router() {
           <Route path="radix-table" element={<RadixTable />} />
           <Route path="create-react-interface" element={<CRI />} />
           <Route path="content-editor" element={<ContentEditor />} />
+          <Route path="prism" element={<PRISM />} />
           <Route path="*" element={<h1 className='ml-40'>Coming Soon</h1>} />
         </Route>
       </Routes>
