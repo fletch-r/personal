@@ -23,7 +23,7 @@ function Layout() {
                                 <h5 className='text-sm'>About</h5>
                             </li>
                         </a>
-                        <a href="/src/assets/CV.pdf" download="AndrewFletcherCV">
+                        <a href="/src/assets/AndrewFletcher_CV_website.pdf" download="AndrewFletcherCV">
                             <li className="hover:bg-steal-300 px-2 py-1 transition-all rounded hover:bg-opacity-20 flex justify-center items-center">
                                 <Tooltip label="Click To Download">
                                     <h5 className='text-sm'>CV</h5>
