@@ -14,10 +14,23 @@ export default function Prism() {
                 I came up with the name PRISM by taking the letters from the name PRoduct Information SysteM.
             </p>
 
-            <h2>Technologies Used</h2>
+            <h2>Tech Stack:</h2>
             <div className="not-prose">
                 <TechStack />
             </div>
+
+            <p>
+                Prism was developed using DDD, Data Driven Development. Each page was designed and developed depending on what data will, either be
+                displayed or interactive with.
+            </p>
+
+            <p>
+                Tailwindcss was chosen to standardize the color palette, spacing and font size.
+            </p>
+
+            <p>
+                MaterialUI was chosen as PRISMs Component Library as it contains all of the needed components to display the product data.
+            </p>
         </article>
     )
 }
