@@ -15,7 +15,7 @@ function SimpleCommit() {
         </div>
         <div>
           <a
-            href="https://github.com/0xATHERIS/simple-commit"
+            href="https://github.com/fletch-r/simple-commit"
             target='_blank'
             rel="noreferrer"
             className="hover:bg-steal-300 rounded-full w-full h-full px-1 py-1 transition-all hover:bg-opacity-20 flex justify-center items-center mt-1"

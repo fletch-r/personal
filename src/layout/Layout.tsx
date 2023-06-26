@@ -30,7 +30,7 @@ function Layout() {
                                 </Tooltip>
                             </li>
                         </a>
-                        <a href='https://github.com/0xATHERIS' target='_blank' rel="noreferrer">
+                        <a href='https://github.com/fletch-r' target='_blank' rel="noreferrer">
                             <li className="hover:bg-steal-300 rounded-full px-1 py-1 transition-all hover:bg-opacity-20 flex justify-center items-center">
                                 <GitHubIcon className="w-1/2" />
                             </li>
@@ -52,7 +52,7 @@ function Layout() {
                         <a href="https://uk.linkedin.com/in/andrew-fletcher-3009" target='_blank' rel="noreferrer" className="hover:bg-steal-300 rounded-full px-2 py-2 transition-all hover:bg-opacity-20 flex justify-center items-center">
                             <LinkedInIcon />
                         </a>
-                        <a href="https://github.com/0xATHERIS" target='_blank' rel="noreferrer" className="hover:bg-steal-300 rounded-full px-2 py-2 transition-all hover:bg-opacity-20 flex justify-center items-center">
+                        <a href="https://github.com/fletch-r" target='_blank' rel="noreferrer" className="hover:bg-steal-300 rounded-full px-2 py-2 transition-all hover:bg-opacity-20 flex justify-center items-center">
                             <GitHubIcon />
                         </a>
                     </div>
