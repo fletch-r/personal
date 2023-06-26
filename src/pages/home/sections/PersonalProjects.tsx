@@ -30,7 +30,7 @@ function PersonalProjects() {
                 </a>
             </div>
 
-            <div className="w-full flex flex-col md:flex-row gap-6 mb-6">
+            {/* <div className="w-full flex flex-col md:flex-row gap-6 mb-6">
                 <a href="/radix-table" className="flex flex-1 justify-between gap-2 flex-col bg-oxford-main/10 hover:bg-transparent hover:bg-gradient-to-r hover:from-blue-600/10 hover:to-orange-600/10 p-4 rounded-lg invisible animate-slide-up-2">
                     <div className='flex flex-col gap-2'>
                         <h4 className="text-xl font-bold">Radix Table</h4>
@@ -58,7 +58,7 @@ function PersonalProjects() {
                         <p className='text-sm'>CSS</p>
                     </div>
                 </a>
-            </div>
+            </div> */}
         </section>
     )
 }
