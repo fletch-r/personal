@@ -4,7 +4,8 @@ import TechStack from './TechStack'
 export default function Prism() {
     return (
         <article className='prose prose-invert mx-auto max-w-none'>
-            <h1 className="font-cals tracking-wider leading-none">PRISM</h1>
+            <h1 className="font-cals tracking-wider leading-none">Details Coming Soon</h1>
+            {/* <h1 className="font-cals tracking-wider leading-none">PRISM</h1>
 
             <p className="lead">
                 A Product Information Manager (PIM) allowing users to on-board products, view and manage product data.
@@ -30,7 +31,7 @@ export default function Prism() {
 
             <p>
                 MaterialUI was chosen as PRISMs Component Library as it contains all of the needed components to display the product data.
-            </p>
+            </p> */}
         </article>
     )
 }
