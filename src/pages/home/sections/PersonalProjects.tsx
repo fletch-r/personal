@@ -1,11 +1,16 @@
-import React from 'react'
+import React from 'react';
+import va from '@vercel/analytics';
 
 function PersonalProjects() {
     return (
         <section className="w-full relative">
             <h4 className="text-2xl font-cals mb-5 slide-up">What I&apos;m working on:</h4>
             <div className="w-full flex flex-col md:flex-row gap-6 mb-6">
-                <a href="/simple-commit" className="flex flex-1 justify-between gap-2 flex-col bg-oxford-main/10 hover:bg-transparent hover:bg-gradient-to-r hover:from-[#8BA7F7]/10 hover:to-[#BBA2F2]/10 p-4 rounded-lg invisible animate-slide-up-1">
+                <a
+                    href="/simple-commit"
+                    className="flex flex-1 justify-between gap-2 flex-col bg-oxford-main/10 hover:bg-transparent hover:bg-gradient-to-r hover:from-[#8BA7F7]/10 hover:to-[#BBA2F2]/10 p-4 rounded-lg invisible animate-slide-up-1"
+                    onClick={() => va.track('SimpleCommit', { location: 'home' })}
+                >
                     <div className='flex flex-col gap-2'>
                         <h4 className="text-xl font-bold">Simple Commit</h4>
                         <p className="text-sm">Simple Commit is a VSCode extension that simplifies the commit process for developers.</p>
@@ -16,7 +21,11 @@ function PersonalProjects() {
                     </div>
                 </a>
 
-                <a href="/create-react-interface" className="flex flex-1 justify-between gap-2 flex-col bg-oxford-main/10 hover:bg-transparent hover:bg-gradient-to-r hover:from-typescript-main/10 hover:to-javascript-main/10 p-4 rounded-lg invisible animate-slide-up-1">
+                <a
+                    href="/create-react-interface"
+                    className="flex flex-1 justify-between gap-2 flex-col bg-oxford-main/10 hover:bg-transparent hover:bg-gradient-to-r hover:from-typescript-main/10 hover:to-javascript-main/10 p-4 rounded-lg invisible animate-slide-up-1"
+                    onClick={() => va.track('CreateReactInterface', { location: 'home' })}
+                >
                     <div className='flex flex-col gap-2'>
                         <h4 className="text-xl font-bold">Create React Interface</h4>
                         <p className="text-sm">An NPM package that gets you started with a Reactjs UI Library.</p>
