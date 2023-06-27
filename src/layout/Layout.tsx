@@ -20,19 +20,19 @@ function Layout() {
                         </div>
                     </a>
                     <ol className='flex gap-6 md:gap-20 items-center'>
-                        <a href='/about' onClick={() => va.track('About')}>
+                        <a href='/about' onClick={() => va.track('About', { location: 'navbar' })}>
                             <li className="hover:bg-steal-300 px-2 py-1 transition-all rounded hover:bg-opacity-20">
                                 <h5 className='text-sm'>About</h5>
                             </li>
                         </a>
-                        <a href="/src/assets/AndrewFletcher_CV_website.pdf" download="AndrewFletcherCV" onClick={() => va.track('CV')}>
+                        <a href="/src/assets/AndrewFletcher_CV_website.pdf" download="AndrewFletcherCV" onClick={() => va.track('CV', { location: 'navbar' })}>
                             <li className="hover:bg-steal-300 px-2 py-1 transition-all rounded hover:bg-opacity-20 flex justify-center items-center">
                                 <Tooltip label="Click To Download">
                                     <h5 className='text-sm'>CV</h5>
                                 </Tooltip>
                             </li>
                         </a>
-                        <a href='https://github.com/fletch-r' target='_blank' rel="noreferrer" onClick={() => va.track('GitHub Navbar')}>
+                        <a href='https://github.com/fletch-r' target='_blank' rel="noreferrer" onClick={() => va.track('GitHub', { location: 'navbar' })}>
                             <li className="hover:bg-steal-300 rounded-full px-1 py-1 transition-all hover:bg-opacity-20 flex justify-center items-center">
                                 <GitHubIcon className="w-1/2" />
                             </li>
@@ -53,7 +53,7 @@ function Layout() {
                             target='_blank'
                             rel="noreferrer"
                             className="hover:bg-steal-300 rounded-full px-2 py-2 transition-all hover:bg-opacity-20 flex justify-center items-center"
-                            onClick={() => va.track('Twitter')}
+                            onClick={() => va.track('Twitter', { location: 'footer' })}
                         >
                             <TwitterIcon />
                         </a>
@@ -62,7 +62,7 @@ function Layout() {
                             target='_blank'
                             rel="noreferrer"
                             className="hover:bg-steal-300 rounded-full px-2 py-2 transition-all hover:bg-opacity-20 flex justify-center items-center"
-                            onClick={() => va.track('LinkedIn')}
+                            onClick={() => va.track('LinkedIn', { location: 'footer' })}
                         >
                             <LinkedInIcon />
                         </a>
@@ -71,7 +71,7 @@ function Layout() {
                             target='_blank'
                             rel="noreferrer"
                             className="hover:bg-steal-300 rounded-full px-2 py-2 transition-all hover:bg-opacity-20 flex justify-center items-center"
-                            onClick={() => va.track('GitHub Footer')}
+                            onClick={() => va.track('GitHub', { location: 'footer' })}
                         >
                             <GitHubIcon />
                         </a>
