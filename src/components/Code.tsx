@@ -5,11 +5,11 @@ type CodeProps = {
 }
 
 function Code({ children }: CodeProps) {
-  return (
-    <code className="border rounded px-2 border-steal-500 py-1 text-sm">
-        {children}
-    </code>
-  )
+    return (
+        <code className="border rounded px-2 border-steal-500 py-1 text-sm text-white">
+            {children}
+        </code>
+    )
 }
 
 export default Code
