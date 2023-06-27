@@ -2,6 +2,8 @@ import React from 'react';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Code from '../components/Code';
 import SimpleCommitIcon from '../assets/SimpleCommitIcon.png';
+import Tooltip from '../components/Tooltip';
+import { VSCodeIcon } from '../icons';
 
 function SimpleCommit() {
   return (
@@ -13,15 +15,27 @@ function SimpleCommit() {
             Simple Commit
           </h1>
         </div>
-        <div>
-          <a
-            href="https://github.com/fletch-r/simple-commit"
-            target='_blank'
-            rel="noreferrer"
-            className="hover:bg-steal-300 rounded-full w-full h-full px-1 py-1 transition-all hover:bg-opacity-20 flex justify-center items-center mt-1"
-          >
-            <GitHubIcon className="w-full" />
-          </a>
+        <div className='flex items-center justify-start gap-4'>
+          <Tooltip label="View Repository">
+            <a
+              href="https://github.com/fletch-r/simple-commit"
+              target='_blank'
+              rel="noreferrer"
+              className="hover:bg-steal-300 rounded-full w-full h-full px-1 py-1 transition-all hover:bg-opacity-20 flex justify-center items-center mt-1"
+            >
+              <GitHubIcon />
+            </a>
+          </Tooltip>
+          <Tooltip label="View VSCode Extension">
+            <a
+              href="https://marketplace.visualstudio.com/items?itemName=0xATHERIS.simple-commit"
+              target='_blank'
+              rel="noreferrer"
+              className="hover:bg-blue-300 rounded-full px-1 py-1 transition-all hover:bg-opacity-20 flex justify-center items-center mt-1"
+            >
+              <VSCodeIcon className="fill-white w-6 h-6" />
+            </a>
+          </Tooltip>
         </div>
       </div>
 

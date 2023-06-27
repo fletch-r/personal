@@ -7,3 +7,4 @@ export { default as NodeIcon } from './NodeIcon';
 export { default as ReactIcon } from './ReactIcon';
 export { default as TypescriptIcon } from './TypescriptIcon';
 export { default as VueIcon } from './VueIcon';
+export { default as VSCodeIcon } from './VSCodeIcon';
