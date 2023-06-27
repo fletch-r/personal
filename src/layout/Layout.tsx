@@ -4,12 +4,14 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import { Outlet } from 'react-router-dom';
+import va from '@vercel/analytics';
+
 import Tooltip from '../components/Tooltip';
 
 function Layout() {
     return (
         <>
-            <nav className='flex items-stretch z-50 border-b p-4 mb-14 md:mb-18 border-oxford-main sticky top-0 left-0 bg-steal-950'>
+            <nav className='flex items-stretch z-20 border-b p-4 mb-14 md:mb-18 border-oxford-main sticky top-0 left-0 bg-steal-950'>
                 <div className="max-w-[1200px] mx-auto flex justify-between items-center w-full md:p-0">
                     <a href='/'>
                         <div className='flex group transition-all'>
@@ -18,19 +20,19 @@ function Layout() {
                         </div>
                     </a>
                     <ol className='flex gap-6 md:gap-20 items-center'>
-                        <a href='/about'>
+                        <a href='/about' onClick={() => va.track('About')}>
                             <li className="hover:bg-steal-300 px-2 py-1 transition-all rounded hover:bg-opacity-20">
                                 <h5 className='text-sm'>About</h5>
                             </li>
                         </a>
-                        <a href="/src/assets/AndrewFletcher_CV_website.pdf" download="AndrewFletcherCV">
+                        <a href="/src/assets/AndrewFletcher_CV_website.pdf" download="AndrewFletcherCV" onClick={() => va.track('CV')}>
                             <li className="hover:bg-steal-300 px-2 py-1 transition-all rounded hover:bg-opacity-20 flex justify-center items-center">
                                 <Tooltip label="Click To Download">
                                     <h5 className='text-sm'>CV</h5>
                                 </Tooltip>
                             </li>
                         </a>
-                        <a href='https://github.com/fletch-r' target='_blank' rel="noreferrer">
+                        <a href='https://github.com/fletch-r' target='_blank' rel="noreferrer" onClick={() => va.track('GitHub Navbar')}>
                             <li className="hover:bg-steal-300 rounded-full px-1 py-1 transition-all hover:bg-opacity-20 flex justify-center items-center">
                                 <GitHubIcon className="w-1/2" />
                             </li>
@@ -46,13 +48,31 @@ function Layout() {
                 <footer className='max-w-[1000px] mx-auto border-oxford-main px-4 py-4 flex justify-between items-center'>
                     <p className="text-neutral-500">Andrew Fletcher - {new Date().getFullYear()}</p>
                     <div className='flex gap-8'>
-                        <a href="https://www.twitter.com/httpfleck" target='_blank' rel="noreferrer" className="hover:bg-steal-300 rounded-full px-2 py-2 transition-all hover:bg-opacity-20 flex justify-center items-center">
+                        <a
+                            href="https://www.twitter.com/httpfleck"
+                            target='_blank'
+                            rel="noreferrer"
+                            className="hover:bg-steal-300 rounded-full px-2 py-2 transition-all hover:bg-opacity-20 flex justify-center items-center"
+                            onClick={() => va.track('Twitter')}
+                        >
                             <TwitterIcon />
                         </a>
-                        <a href="https://uk.linkedin.com/in/andrew-fletcher-3009" target='_blank' rel="noreferrer" className="hover:bg-steal-300 rounded-full px-2 py-2 transition-all hover:bg-opacity-20 flex justify-center items-center">
+                        <a
+                            href="https://uk.linkedin.com/in/andrew-fletcher-3009"
+                            target='_blank'
+                            rel="noreferrer"
+                            className="hover:bg-steal-300 rounded-full px-2 py-2 transition-all hover:bg-opacity-20 flex justify-center items-center"
+                            onClick={() => va.track('LinkedIn')}
+                        >
                             <LinkedInIcon />
                         </a>
-                        <a href="https://github.com/fletch-r" target='_blank' rel="noreferrer" className="hover:bg-steal-300 rounded-full px-2 py-2 transition-all hover:bg-opacity-20 flex justify-center items-center">
+                        <a
+                            href="https://github.com/fletch-r"
+                            target='_blank'
+                            rel="noreferrer"
+                            className="hover:bg-steal-300 rounded-full px-2 py-2 transition-all hover:bg-opacity-20 flex justify-center items-center"
+                            onClick={() => va.track('GitHub Footer')}
+                        >
                             <GitHubIcon />
                         </a>
                     </div>
