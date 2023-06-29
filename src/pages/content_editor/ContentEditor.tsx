@@ -1,10 +1,10 @@
 import React from 'react'
 import "prismjs/themes/prism-tomorrow.css";
 
-import placeholder_img from '../../assets/placeholder.png';
-import ContentEditorHomepage from '../../assets/ContentEditorHomepage.jpg';
-import CEPageEditor from '../../assets/CEPageEditor.jpg';
-import CEPageEditorOpen from '../../assets/CEPageEditorOpen.jpg';
+import ContentEditorHomepage from '../../assets/content-editor/ContentEditorHomepage.jpg';
+import CEPageEditor from '../../assets/content-editor/CEPageEditor.jpg';
+import CEPageEditorOpen from '../../assets/content-editor/CEPageEditorOpen.jpg';
+import SchedulingPage from '../../assets/content-editor/SchedulingPage.jpg';
 import ContentJSON from './ContentJSON';
 import TechStack from './TechStack';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
@@ -12,17 +12,18 @@ import useExpandImage from '../../hooks/useExpandImage';
 
 function MicroscopeIcon() {
     return (
-        <div className="absolute top-4 right-4 rounded-full flex items-center justify-center p-2 opacity-0 transition-opacity peer-hover:opacity-100 bg-[rgba(255,255,255,0.4)]">
-            <SearchRoundedIcon className="text-neutral-500" style={{ fontSize: '2rem' }} />
+        <div className="absolute top-4 right-4 rounded-full flex items-center justify-center p-2 opacity-0 transition-opacity peer-hover:opacity-100 bg-[rgba(255,255,255,0.6)]">
+            <SearchRoundedIcon className="text-neutral-800" style={{ fontSize: '2rem' }} />
         </div>
     );
 }
 
 export default function ContentEditor() {
     const [clicked, setClicked] = React.useState('');
-    const [homepageRef, HomepageExpandedImage] = useExpandImage(clicked === 'ContentEditorHomepage');
+    const [homepageRef, HomepageExpandedImage] = useExpandImage(clicked === 'ContentEditorHomepage', 1.4);
     const [pageEditorRef, PageEditorExpandedImage] = useExpandImage(clicked === 'CEPageEditor', 2.2);
     const [pageEditorOpenRef, PageEditorOpenExpandedImage] = useExpandImage(clicked === 'CEPageEditorOpen', 2.2);
+    const [schedulePageRef, SchedulePageExpandedImage] = useExpandImage(clicked === 'SchedulePage', 1.5);
 
     return (
         <article className='prose prose-invert mx-auto max-w-none'>
@@ -177,9 +178,10 @@ export default function ContentEditor() {
                         ref={pageEditorRef}
                         src={CEPageEditor}
                         alt="Content Editor Page Editor"
-                        className={`rounded shadow-md z-50 cursor-pointer ${clicked === 'CEPageEditor' ? 'opacity-0' : ''}`}
+                        className={`rounded shadow-md z-50 cursor-pointer peer ${clicked === 'CEPageEditor' ? 'opacity-0' : ''}`}
                         onClick={() => setClicked('CEPageEditor')}
                     />
+                    <MicroscopeIcon />
                     <figcaption>
                         Page Editor
                     </figcaption>
@@ -190,9 +192,10 @@ export default function ContentEditor() {
                         ref={pageEditorOpenRef}
                         src={CEPageEditorOpen}
                         alt="Content Editor Page Editor Fields"
-                        className={`rounded shadow-md z-50 cursor-pointer ${clicked === 'CEPageEditorOpen' ? 'opacity-0' : ''}`}
+                        className={`rounded shadow-md z-50 cursor-pointer peer ${clicked === 'CEPageEditorOpen' ? 'opacity-0' : ''}`}
                         onClick={() => setClicked('CEPageEditorOpen')}
                     />
+                    <MicroscopeIcon />
                     <figcaption>
                         Component Fields
                     </figcaption>
@@ -209,8 +212,16 @@ export default function ContentEditor() {
                 From here the user can then view the currently saved page. Schedule the page to go live at a future specific date. Or directly sync that page to appear on the live website.
             </p>
 
-            <figure className="w-[700px] h-[475px] mx-auto">
-                <img src={placeholder_img} alt="Content Editor Home" className="rounded shadow-md z-50" />
+            <figure className="relative">
+                {clicked === 'SchedulePage' && <SchedulePageExpandedImage />}
+                <img
+                    ref={schedulePageRef}
+                    src={SchedulingPage}
+                    alt="Schedule Page"
+                    className={`rounded shadow-md z-50 cursor-pointer peer ${clicked === 'SchedulePage' ? 'opacity-0' : ''}`}
+                    onClick={() => setClicked('SchedulePage')}
+                />
+                <MicroscopeIcon />
                 <figcaption>
                     Scheduling a page.
                 </figcaption>
