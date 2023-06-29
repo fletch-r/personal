@@ -2,10 +2,28 @@ import React from 'react'
 import "prismjs/themes/prism-tomorrow.css";
 
 import placeholder_img from '../../assets/placeholder.png';
+import ContentEditorHomepage from '../../assets/ContentEditorHomepage.jpg';
+import CEPageEditor from '../../assets/CEPageEditor.jpg';
+import CEPageEditorOpen from '../../assets/CEPageEditorOpen.jpg';
 import ContentJSON from './ContentJSON';
 import TechStack from './TechStack';
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
+import useExpandImage from '../../hooks/useExpandImage';
 
-function ContentEditor() {
+function MicroscopeIcon() {
+    return (
+        <div className="absolute top-4 right-4 rounded-full flex items-center justify-center p-2 opacity-0 transition-opacity peer-hover:opacity-100 bg-[rgba(255,255,255,0.4)]">
+            <SearchRoundedIcon className="text-neutral-500" style={{ fontSize: '2rem' }} />
+        </div>
+    );
+}
+
+export default function ContentEditor() {
+    const [clicked, setClicked] = React.useState('');
+    const [homepageRef, HomepageExpandedImage] = useExpandImage(clicked === 'ContentEditorHomepage');
+    const [pageEditorRef, PageEditorExpandedImage] = useExpandImage(clicked === 'CEPageEditor', 2.2);
+    const [pageEditorOpenRef, PageEditorOpenExpandedImage] = useExpandImage(clicked === 'CEPageEditorOpen', 2.2);
+
     return (
         <article className='prose prose-invert mx-auto max-w-none'>
             <h1 className="font-cals tracking-wider leading-none">Content Editor</h1>
@@ -22,8 +40,16 @@ function ContentEditor() {
                 Then once the application was released to the first users more developers were brought onto the project.
             </p>
 
-            <figure className="w-[700px] h-[475px] mx-auto">
-                <img src={placeholder_img} alt="Content Editor Home" className="rounded shadow-md" />
+            <figure className="mx-auto relative">
+                {clicked === 'ContentEditorHomepage' && <HomepageExpandedImage />}
+                <img
+                    ref={homepageRef}
+                    src={ContentEditorHomepage}
+                    alt="Content Editor Home"
+                    className={`rounded shadow-md peer cursor-pointer ${clicked === 'ContentEditorHomepage' ? 'opacity-0' : ''}`}
+                    onClick={() => setClicked('ContentEditorHomepage')}
+                />
+                <MicroscopeIcon />
                 <figcaption>
                     Home page of the Content Editor
                 </figcaption>
@@ -120,7 +146,6 @@ function ContentEditor() {
                 </ul>
             </p>
 
-            {/* TODO: Add images */}
             <h3>Page Editor</h3>
             <p>The Page Editor is split into 2 sections.</p>
             <ul>
@@ -145,12 +170,34 @@ function ContentEditor() {
                 the user to add another object to the array. This is usually used for things like CTAs.
             </p>
 
-            <figure className="w-[700px] h-[475px] mx-auto">
-                <img src={placeholder_img} alt="Content Editor Home" className="rounded shadow-md" />
-                <figcaption>
-                    Page Editor of the Content Editor
-                </figcaption>
-            </figure>
+            <div className="flex items-center gap-8 relative">
+                <figure className="w-[700px] h-auto relative">
+                    {clicked === 'CEPageEditor' && <PageEditorExpandedImage />}
+                    <img
+                        ref={pageEditorRef}
+                        src={CEPageEditor}
+                        alt="Content Editor Page Editor"
+                        className={`rounded shadow-md z-50 cursor-pointer ${clicked === 'CEPageEditor' ? 'opacity-0' : ''}`}
+                        onClick={() => setClicked('CEPageEditor')}
+                    />
+                    <figcaption>
+                        Page Editor
+                    </figcaption>
+                </figure>
+                <figure className="w-[700px] h-auto relative">
+                    {clicked === 'CEPageEditorOpen' && <PageEditorOpenExpandedImage />}
+                    <img
+                        ref={pageEditorOpenRef}
+                        src={CEPageEditorOpen}
+                        alt="Content Editor Page Editor Fields"
+                        className={`rounded shadow-md z-50 cursor-pointer ${clicked === 'CEPageEditorOpen' ? 'opacity-0' : ''}`}
+                        onClick={() => setClicked('CEPageEditorOpen')}
+                    />
+                    <figcaption>
+                        Component Fields
+                    </figcaption>
+                </figure>
+            </div>
 
             <h3>Saving</h3>
             <p>
@@ -163,13 +210,13 @@ function ContentEditor() {
             </p>
 
             <figure className="w-[700px] h-[475px] mx-auto">
-                <img src={placeholder_img} alt="Content Editor Home" className="rounded shadow-md" />
+                <img src={placeholder_img} alt="Content Editor Home" className="rounded shadow-md z-50" />
                 <figcaption>
                     Scheduling a page.
                 </figcaption>
             </figure>
+
+            {clicked.length > 0 && <div className="w-screen h-screen bg-[rgba(0,0,0,0.4)] fixed top-0 left-0 z-40" onClick={() => setClicked('')} />}
         </article>
     )
 }
-
-export default ContentEditor
