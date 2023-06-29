@@ -1,9 +1,9 @@
 import React from 'react'
 
 type ReferenceImageDimensions = {
-    /** x position on the screen */
+    /** x position of the reference image on the page */
     x: number;
-    /** y position on the screen */
+    /** y position of the reference image on the page */
     y: number;
     /** width of reference image */
     width: number;
@@ -61,10 +61,8 @@ export default function useExpandImage(show: boolean, scale = 1.2): [React.RefOb
                 ref={img}
                 src={refSrc}
                 alt={refAlt}
-                className="rounded shadow-md fixed z-50 transition-[top] ease-in-out"
+                className="rounded shadow-md fixed z-50 transition-[top] ease-in-out top-1/2 left-1/2"
                 style={{
-                    top: `50%`,
-                    left: '50%',
                     width: `${refDimensions.width}px`,
                     height: `${refDimensions.height}px`,
                     transform: `translate(-50%, -50%) scale(${scale})`,
