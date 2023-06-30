@@ -6,6 +6,8 @@ import PrismLogo from '../../assets/prism/PrismLogo.png'
 import useExpandImage from '../../hooks/useExpandImage';
 import ProductWizard from '../../assets/prism/ProductWizard.jpg';
 import ProductWizardStep2 from '../../assets/prism/ProductWizardStep2.jpg';
+import ProductsTable from '../../assets/prism/ProductsTable.jpg';
+import ProductsPage from '../../assets/prism/ProductPage.jpg';
 
 function MicroscopeIcon() {
     return (
@@ -20,6 +22,8 @@ export default function Prism() {
 
     const [wizardRef, WizardExpandedImage] = useExpandImage(clickedImage === 'wizard', 2.2);
     const [wizardStep2Ref, WizardStep2ExpandedImage] = useExpandImage(clickedImage === 'step2', 2.2);
+    const [productsTableRef, ProductsTableExpandedImage] = useExpandImage(clickedImage === 'productsTable', 2.2);
+    const [productPageRef, ProductPageExpandedImage] = useExpandImage(clickedImage === 'productsPage', 2.2);
 
     return (
         <article className='prose prose-invert mx-auto max-w-none'>
@@ -118,6 +122,49 @@ export default function Prism() {
                     <MicroscopeIcon />
                     <figcaption>
                         Product Wizard Data Page - (click to zoom)
+                    </figcaption>
+                </figure>
+            </div>
+
+            <p>
+                The Product Wizard was a solutions to the on-boarding problem JDSports had. Before products would be separated across different PIM&apos;s and platforms and then shared.
+            </p>
+            <p>
+                We fixed this by being able to import products from other platforms and then continue/finish the product on-boarding within the Product Wizard so the product would have
+                all the information we need to push this product on-site. Then once the product was on-boarded we could then distribute that products data to other applications which are not
+                in the JDGroup ecosystem.
+            </p>
+
+            <h3>Existing Products:</h3>
+            <p>Here you can search for specific kinds of products and edit a products data.</p>
+
+            <div className="flex items-center gap-8 relative">
+                <figure className="mx-auto relative">
+                    {clickedImage === 'productsTable' && <ProductsTableExpandedImage />}
+                    <img
+                        ref={productsTableRef}
+                        src={ProductsTable}
+                        alt="Products Table"
+                        className={`rounded peer cursor-pointer hover:scale-105 transition-all shadow-md hover:shadow-[0_0_20px_6px_#20355a] ${clickedImage === 'productsTable' ? 'opacity-0' : ''}`}
+                        onClick={() => setClickedImage('productsTable')}
+                    />
+                    <MicroscopeIcon />
+                    <figcaption>
+                        Products Table - (click to zoom)
+                    </figcaption>
+                </figure>
+                <figure className="mx-auto relative">
+                    {clickedImage === 'productsPage' && <ProductPageExpandedImage />}
+                    <img
+                        ref={productPageRef}
+                        src={ProductsPage}
+                        alt="Product Page"
+                        className={`rounded shadow-md peer cursor-pointer hover:scale-105 transition-all hover:shadow-[0_0_20px_6px_#20355a] ${clickedImage === 'productsPage' ? 'opacity-0' : ''}`}
+                        onClick={() => setClickedImage('productsPage')}
+                    />
+                    <MicroscopeIcon />
+                    <figcaption>
+                        Product Page - (click to zoom)
                     </figcaption>
                 </figure>
             </div>
