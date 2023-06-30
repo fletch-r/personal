@@ -15,6 +15,7 @@ type ReferenceImageDimensions = {
  * Add this ref to an image. When clicking the image a larger expanded will animate
  *
  * @param {boolean} show When to show the expanded image.
+ * @param {number} scale Set the scale value about you want your expanded image to grow by. Defaulted to 1.2.
  */
 export default function useExpandImage(show: boolean, scale = 1.2): [React.RefObject<HTMLImageElement>, React.FC] {
     const ref = React.useRef<HTMLImageElement>(null);
