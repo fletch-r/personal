@@ -30,6 +30,7 @@ export default function useExpandImage(show: boolean, scale = 1.2): [React.RefOb
         height: 0,
     });
 
+    // Get reference images values.
     React.useEffect(() => {
         if (ref.current) {
             setRefSrc(ref.current.src);
@@ -39,6 +40,7 @@ export default function useExpandImage(show: boolean, scale = 1.2): [React.RefOb
         }
     }, [ref.current, show]);
 
+    // Set custom zoom animation to ExpandImage
     React.useEffect(() => {
         if (img.current) {
             img.current.animate([
@@ -56,6 +58,7 @@ export default function useExpandImage(show: boolean, scale = 1.2): [React.RefOb
         }
     }, [img.current]);
 
+    // TODO: Find better name. ExpandImage doesn't sound the best.
     const ExpandedImage = React.useMemo(() => {
         const image: React.FC = () => (
             <img
