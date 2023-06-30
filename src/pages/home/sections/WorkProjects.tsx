@@ -3,9 +3,9 @@ import va from '@vercel/analytics';
 
 function WorkProjects() {
     return (
-        <section className="w-full mb-14 md:mb-24">
-            <h4 className="text-2xl font-cals mb-5 slide-up">Work projects:</h4>
-            <div className="w-full flex gap-6 mb-6 flex-col md:flex-row slide-up-30">
+        <section className="w-full">
+            <h4 className="text-2xl font-cals mb-5 slide-up">Projects:</h4>
+            <div className="w-full flex gap-6 flex-col md:flex-row slide-up-30">
                 <a
                     href="/content-editor"
                     className="flex flex-1 justify-between gap-2 flex-col bg-oxford-main/10 hover:bg-green-600/10 p-4 rounded-lg invisible animate-slide-up-1"

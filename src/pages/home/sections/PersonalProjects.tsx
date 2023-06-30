@@ -5,7 +5,7 @@ function PersonalProjects() {
     return (
         <section className="w-full relative">
             <h4 className="text-2xl font-cals mb-5 slide-up">What I&apos;m working on:</h4>
-            <div className="w-full flex flex-col md:flex-row gap-6 mb-6">
+            <div className="w-full flex flex-col md:flex-row gap-6">
                 <a
                     href="/simple-commit"
                     className="flex flex-1 justify-between gap-2 flex-col bg-oxford-main/10 hover:bg-transparent hover:bg-gradient-to-r hover:from-[#8BA7F7]/10 hover:to-[#BBA2F2]/10 p-4 rounded-lg invisible animate-slide-up-1"
