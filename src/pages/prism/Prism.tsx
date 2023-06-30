@@ -18,8 +18,8 @@ function MicroscopeIcon() {
 export default function Prism() {
     const [clickedImage, setClickedImage] = React.useState('');
 
-    const [wizardRef, WizardExpandedImage] = useExpandImage(clickedImage === 'wizard');
-    const [wizardStep2Ref, WizardStep2ExpandedImage] = useExpandImage(clickedImage === 'step2');
+    const [wizardRef, WizardExpandedImage] = useExpandImage(clickedImage === 'wizard', 2.2);
+    const [wizardStep2Ref, WizardStep2ExpandedImage] = useExpandImage(clickedImage === 'step2', 2.2);
 
     return (
         <article className='prose prose-invert mx-auto max-w-none'>
@@ -90,34 +90,37 @@ export default function Prism() {
 
             <h3>Product Wizard:</h3>
             <p>The product wizard is a page where users can on-board products.</p>
-            <figure className="mx-auto relative">
-                {clickedImage === 'wizard' && <WizardExpandedImage />}
-                <img
-                    ref={wizardRef}
-                    src={ProductWizard}
-                    alt="Product Wizard"
-                    className={`rounded shadow-md peer cursor-pointer transition-[box-shadow] hover:shadow-2xl hover:shadow-blue-900 ${clickedImage === 'wizard' ? 'opacity-0' : ''}`}
-                    onClick={() => setClickedImage('wizard')}
-                />
-                <MicroscopeIcon />
-                <figcaption>
-                    Product Wizard
-                </figcaption>
-            </figure>
-            <figure className="mx-auto relative">
-                {clickedImage === 'step2' && <WizardStep2ExpandedImage />}
-                <img
-                    ref={wizardStep2Ref}
-                    src={ProductWizardStep2}
-                    alt="Product Wizard Data Page"
-                    className={`rounded shadow-md peer cursor-pointer transition-[box-shadow] hover:shadow-2xl hover:shadow-blue-900 ${clickedImage === 'step2' ? 'opacity-0' : ''}`}
-                    onClick={() => setClickedImage('step2')}
-                />
-                <MicroscopeIcon />
-                <figcaption>
-                    Product Wizard Data Page
-                </figcaption>
-            </figure>
+
+            <div className="flex items-center gap-8 relative">
+                <figure className="mx-auto relative">
+                    {clickedImage === 'wizard' && <WizardExpandedImage />}
+                    <img
+                        ref={wizardRef}
+                        src={ProductWizard}
+                        alt="Product Wizard"
+                        className={`rounded peer cursor-pointer hover:scale-105 transition-all shadow-md hover:shadow-[0_0_20px_6px_#20355a] ${clickedImage === 'wizard' ? 'opacity-0' : ''}`}
+                        onClick={() => setClickedImage('wizard')}
+                    />
+                    <MicroscopeIcon />
+                    <figcaption>
+                        Product Wizard - (click to zoom)
+                    </figcaption>
+                </figure>
+                <figure className="mx-auto relative">
+                    {clickedImage === 'step2' && <WizardStep2ExpandedImage />}
+                    <img
+                        ref={wizardStep2Ref}
+                        src={ProductWizardStep2}
+                        alt="Product Wizard Data Page"
+                        className={`rounded shadow-md peer cursor-pointer hover:scale-105 transition-all hover:shadow-[0_0_20px_6px_#20355a] ${clickedImage === 'step2' ? 'opacity-0' : ''}`}
+                        onClick={() => setClickedImage('step2')}
+                    />
+                    <MicroscopeIcon />
+                    <figcaption>
+                        Product Wizard Data Page - (click to zoom)
+                    </figcaption>
+                </figure>
+            </div>
 
             {clickedImage.length > 0 && <div className="w-screen h-screen bg-[rgba(0,0,0,0.4)] fixed top-0 left-0 z-40" onClick={() => setClickedImage('')} />}
         </article>

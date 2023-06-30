@@ -47,7 +47,7 @@ export default function ContentEditor() {
                     ref={homepageRef}
                     src={ContentEditorHomepage}
                     alt="Content Editor Home"
-                    className={`rounded shadow-md peer cursor-pointer ${clicked === 'ContentEditorHomepage' ? 'opacity-0' : ''}`}
+                    className={`rounded shadow-md peer cursor-pointer hover:scale-105 transition-transform ${clicked === 'ContentEditorHomepage' ? 'opacity-0' : ''}`}
                     onClick={() => setClicked('ContentEditorHomepage')}
                 />
                 <MicroscopeIcon />
@@ -178,7 +178,7 @@ export default function ContentEditor() {
                         ref={pageEditorRef}
                         src={CEPageEditor}
                         alt="Content Editor Page Editor"
-                        className={`rounded shadow-md z-50 cursor-pointer peer ${clicked === 'CEPageEditor' ? 'opacity-0' : ''}`}
+                        className={`rounded shadow-md z-50 hover:scale-105 transition-transform cursor-pointer peer ${clicked === 'CEPageEditor' ? 'opacity-0' : ''}`}
                         onClick={() => setClicked('CEPageEditor')}
                     />
                     <MicroscopeIcon />
@@ -192,7 +192,7 @@ export default function ContentEditor() {
                         ref={pageEditorOpenRef}
                         src={CEPageEditorOpen}
                         alt="Content Editor Page Editor Fields"
-                        className={`rounded shadow-md z-50 cursor-pointer peer ${clicked === 'CEPageEditorOpen' ? 'opacity-0' : ''}`}
+                        className={`rounded shadow-md z-50 hover:scale-105 transition-transform cursor-pointer peer ${clicked === 'CEPageEditorOpen' ? 'opacity-0' : ''}`}
                         onClick={() => setClicked('CEPageEditorOpen')}
                     />
                     <MicroscopeIcon />
@@ -218,7 +218,7 @@ export default function ContentEditor() {
                     ref={schedulePageRef}
                     src={SchedulingPage}
                     alt="Schedule Page"
-                    className={`rounded shadow-md z-50 cursor-pointer peer ${clicked === 'SchedulePage' ? 'opacity-0' : ''}`}
+                    className={`rounded shadow-md z-50 hover:scale-105 transition-transform cursor-pointer peer ${clicked === 'SchedulePage' ? 'opacity-0' : ''}`}
                     onClick={() => setClicked('SchedulePage')}
                 />
                 <MicroscopeIcon />
