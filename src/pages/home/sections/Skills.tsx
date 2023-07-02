@@ -10,6 +10,7 @@ import {
     TypescriptIcon,
     VueIcon,
 } from '../../../icons'
+import MongoDB from '../../../assets/mongodb_logo.webp';
 
 export default function Skills() {
     return (
@@ -25,6 +26,7 @@ export default function Skills() {
                 <MUIIcon className="w-14 h-14 opacity-60 hover:opacity-100 fill-blue-400" />
                 <NodeIcon className="w-14 h-14 opacity-60 hover:opacity-100 fill-green-400" />
                 <DockerIcon className="w-14 h-14 opacity-60 hover:opacity-100 fill-blue-400" />
+                <img src={MongoDB} alt="mongodb" className="-m-4 w-12 h-auto opacity-60 hover:opacity-100" />
             </div>
         </section>
     )
