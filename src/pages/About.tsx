@@ -17,12 +17,16 @@ export default function About() {
     return (
         <article className="prose prose-invert mx-auto">
             <h1 className="font-cals text-4xl tracking-wider">About me</h1>
-            <p>My name is Andrew Fletcher, I&apos;m a {birthday} year old, frontend developer from the north-west of England.</p>
-            <p>My background is in developing internal systems for an e-commerce platform. This includes PIM and CMS applications.</p>
+            <p>My name is Andrew Fletcher, I&apos;m a {birthday} year old, senior frontend developer from the north-west of England.</p>
+            <p>My background is in developing internal systems for e-commerce platforms. This includes applications link PIM and CMS.</p>
             <p>
-                As for my hobbies, I mainly just like to code. I like to think of my work projects as my own so I do switch between personal
-                and work projects in my own time. I know this might be controversial as some people think this is unhealthy. But whether
-                it&apos;s for work or for personal use, a project is a project.
+                As for my hobbies, coding isn&apos;t just a job for me but my hobby. In my free time I love to catch up on new or new things within
+                the frontend ecosystem. Developing my skills further, seeing if there are any open-source libraries I can contribute too or
+                just continuing on with my own personal projects.
+            </p>
+            <p>
+                I currently have 2 personal projects written about here on my personal website but I have 2 more soon to be released and
+                added here.
             </p>
             <p>
                 Not only do I like to learn about new and existing frontend technologies but I like to learn about UI and UX methodologies.
