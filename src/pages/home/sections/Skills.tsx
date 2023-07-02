@@ -15,7 +15,7 @@ export default function Skills() {
     return (
         <section className="w-full relative">
             <h4 className="text-2xl font-cals mb-5 slide-up">Skills:</h4>
-            <div className="flex items-center justify-evenly animate-slide-up-1">
+            <div className="flex items-center justify-evenly animate-slide-up-1 flex-wrap">
                 <HTMLIcon className="w-14 h-14 opacity-60 hover:opacity-100 fill-orange-400" />
                 <CSSIcon className="w-14 h-14 opacity-60 hover:opacity-100 fill-blue-400" />
                 <JavaScriptIcon className="w-14 h-14 opacity-60 hover:opacity-100 fill-javascript-main" />
