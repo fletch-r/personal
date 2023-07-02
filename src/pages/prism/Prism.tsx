@@ -34,7 +34,6 @@ export default function Prism() {
             </div>
 
             <p className="lead">
-                {/* A Product Information Manager (PIM) allowing users to on-board products, view, generate reports and manage product data. */}
                 A Product Information Manager (PIM) that helps JD Group to manage their product data in a single location.
             </p>
 
@@ -49,11 +48,14 @@ export default function Prism() {
 
             <h3>MUI:</h3>
             <p>
-                I chose MaterialUI, now MUI, for our Component Library as it is a production ready allowing us to integrate it quickly into the application.
+                I chose MaterialUI, now MUI, for our component library as it is production ready allowing us to integrate it quickly into the application.
             </p>
             <p>
                 The component library MUI has an extensive amount of components that is able to take data and display it in a user friendly format.
-                MUI has virtualization built into some components, reducing load times for the user.
+                The use of virtualization within MUI&apos;s means the components can handle thousands of data without slowing down the users client.
+            </p>
+            <p>
+                For these reasons MUI was the ideal component library for PRISM.
             </p>
 
             <h3>Tailwindcss:</h3>
@@ -63,14 +65,17 @@ export default function Prism() {
 
             <h3>Redux:</h3>
             <p>
-                Redux was chosen as it is the industry standard state manager giving us the flexibility so when new developers are brought onto the project
+                Redux was chosen as it is the industry standard state manager.
+            </p>
+            <p>
+                It gives us the flexibility of easily sharing state between all components and, as the industry standard, when new developers are brought onto the project
                 they can either jump right in or there will be less of a learning curve.
             </p>
 
             <h2>About:</h2>
 
-            <p>
-                Developed using DDD, Data Driven Development.
+            <p className="lead">
+                PRISM is developed using DDD, Data Driven Development.
             </p>
 
             <p>
@@ -168,6 +173,14 @@ export default function Prism() {
                     </figcaption>
                 </figure>
             </div>
+
+            <p>
+                After on-boarding there might be some attributes or details left unfinished. The product page is where the user can search for that or any product in general and complete the product.
+            </p>
+
+            <p>
+                PRISM has a range of pages such as generating reports for stakeholders or anyone who needs detailed metrics.
+            </p>
 
             {clickedImage.length > 0 && <div className="w-screen h-screen bg-[rgba(0,0,0,0.4)] fixed top-0 left-0 z-40" onClick={() => setClickedImage('')} />}
         </article>
