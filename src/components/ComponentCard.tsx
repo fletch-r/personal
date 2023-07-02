@@ -13,7 +13,7 @@ function ComponentCard({ onClick, selected, label, children }: ComponentCardProp
             type="button"
             onClick={() => onClick()}
             className={`
-            w-1/4 h-[180px]
+            w-full md:w-1/4 h-max md:h-[180px]
             bg-neutral-700
             border-2 ${selected ? 'border-neutral-300' : 'border-transparent hover:border-neutral-500'}
             rounded-lg
@@ -22,11 +22,11 @@ function ComponentCard({ onClick, selected, label, children }: ComponentCardProp
             cursor-pointer
         `}
         >
-            <div className='w-full h-3/4 flex items-center justify-center'>
+            <div className='w-full h-3/4 hidden md:flex items-center justify-center'>
                 {children}
             </div>
             <div className="w-full h-1/4 flex items-center justify-center">
-                <p>{label}</p>
+                <p className="text-sm md:text-base">{label}</p>
             </div>
         </button>
     )

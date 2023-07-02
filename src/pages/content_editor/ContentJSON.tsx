@@ -31,7 +31,7 @@ function ContentJSON() {
             }
         ]
     };
-    const [exampleJson, setExampleJson] = React.useState<any>(initial_json);
+    const [exampleJson, setExampleJson] = React.useState<unknown>(initial_json);
 
     React.useEffect(() => {
         Prism.highlightAll();
@@ -47,7 +47,7 @@ function ContentJSON() {
     return (
         <>
             <section className="not-prose my-8">
-                <div className="w-full flex items-center justify-evenly">
+                <div className="w-full flex items-center gap-2 md:justify-evenly justify-between">
                     <ComponentCard
                         label='MainBanner'
                         selected={selectedComponents.includes('MainBanner')}
