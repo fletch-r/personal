@@ -54,17 +54,17 @@ export default function CRI() {
             <section className="not-prose">
                 <div>
                     <div className="flex w-full justify-evenly gap-8">
-                        <div className="rounded-full bg-oxford-950 border border-oxford-900 p-4 flex justify-center items-center" >
-                            <img src={ReactSVG} alt="react" className="w-16 h-16" />
+                        <div className="rounded-full bg-oxford-950 border border-oxford-900 p-0 md:p-4 flex justify-center items-center" >
+                            <img src={ReactSVG} alt="react" className="p-3 md:p-0 w-16 h-16" />
                         </div>
-                        <div className="rounded-full bg-oxford-950 border border-oxford-900 p-4 flex justify-center items-center" >
-                            <img src={Storybook} alt="storybook" className="w-16 h-16" />
+                        <div className="rounded-full bg-oxford-950 border border-oxford-900 p-0 md:p-4 flex justify-center items-center" >
+                            <img src={Storybook} alt="storybook" className="p-3 md:p-0 w-16 h-16" />
                         </div>
-                        <div className="rounded-full bg-oxford-950 border border-oxford-900 p-4 flex justify-center items-center" >
-                            <img src={Tailwindcss} alt="tailwind" className="w-16 h-16" />
+                        <div className="rounded-full bg-oxford-950 border border-oxford-900 p-0 md:p-4 flex justify-center items-center" >
+                            <img src={Tailwindcss} alt="tailwind" className="p-3 md:p-0 w-16 h-16" />
                         </div>
-                        <div className="rounded-full bg-oxford-950 border border-oxford-900 p-4 flex justify-center items-center" >
-                            <img src={Rollup} alt="rollup" className="w-16 h-16" />
+                        <div className="rounded-full bg-oxford-950 border border-oxford-900 p-0 md:p-4 flex justify-center items-center" >
+                            <img src={Rollup} alt="rollup" className="p-3 md:p-0 w-16 h-16" />
                         </div>
                     </div>
                 </div>

@@ -174,7 +174,7 @@ function SimpleCommit() {
 
             <p>Here are some of the configuration options:</p>
 
-            <section className="border-2 rounded border-neutral-700 bg-neutral-800">
+            <section className="border-2 rounded border-neutral-700 bg-neutral-800 overflow-auto">
               <table className="w-full">
                 <thead className="border-b border-neutral-500 bg-neutral-700">
                   <tr>
