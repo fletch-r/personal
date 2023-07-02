@@ -28,7 +28,7 @@ function PersonalProjects() {
                 >
                     <div className='flex flex-col gap-2'>
                         <h4 className="text-xl font-bold">Create React Interface</h4>
-                        <p className="text-sm">An NPM package that gets you started with a Reactjs UI Library.</p>
+                        <p className="text-sm">An NPM package that gets you started with a React UI Library.</p>
                     </div>
                     <div className="flex gap-2 justify-start items-center h-6">
                         <div className="w-2 h-2 bg-typescript-main rounded-full"></div>

@@ -27,7 +27,7 @@ function WorkProjects() {
                 >
                     <div className='flex flex-col gap-2'>
                         <h4 className="text-xl font-bold">PRISM</h4>
-                        <p className="text-sm">A PIM built and designed by me for JDSports that allows various teams to organize and manage thousands of product information.</p>
+                        <p className="text-sm">A PIM built and designed for JDSports that allows various teams to organize and manage thousands of product information.</p>
                     </div>
                     <div className="flex gap-2 justify-start items-center h-6">
                         <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
