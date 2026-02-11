@@ -46,6 +46,19 @@ function Layout() {
                 </div>
             </nav>
             <main className='h-full min-h-screen max-w-[1000px] mx-auto px-4 md:p-0'>
+                <section className="bg-white text-steal-950 rounded-md p-4 my-6 shadow-sm">
+                    <h1>
+                        Currently in progress moving this site to{" "}
+                        <a
+                            href="https://www.andrew-fletcher.co.uk"
+                            target='_blank'
+                            rel="noreferrer"
+                            className="text-blue-600 underline font-semibold hover:text-blue-800"
+                        >
+                            www.andrew-fletcher.co.uk
+                        </a>
+                    </h1>
+                </section>
                 <Outlet />
             </main>
             <div className="mt-12">
