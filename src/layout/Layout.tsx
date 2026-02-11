@@ -25,12 +25,12 @@ function Layout() {
                                 <h5 className='text-sm'>About</h5>
                             </li>
                         </a>
-                        <a href='/collection' onClick={() => va.track('Collection', { location: 'navbar' })}>
+                        <a href='https://www.andrew-fletcher.co.uk/collection' onClick={() => va.track('Collection', { location: 'navbar' })}>
                             <li className="hover:bg-steal-300 px-2 py-1 transition-all rounded hover:bg-opacity-20">
                                 <h5 className='text-sm'>Collection</h5>
                             </li>
                         </a>
-                        <a href="/src/assets/AndrewFletcher_CV_website.pdf" download="AndrewFletcherCV" onClick={() => va.track('CV', { location: 'navbar' })}>
+                        <a href="/src/assets/AndrewFletcher-CV.pdf" download="AndrewFletcherCV" onClick={() => va.track('CV', { location: 'navbar' })}>
                             <li className="hover:bg-steal-300 px-2 py-1 transition-all rounded hover:bg-opacity-20 flex justify-center items-center">
                                 <Tooltip label="Click To Download">
                                     <h5 className='text-sm'>CV</h5>
